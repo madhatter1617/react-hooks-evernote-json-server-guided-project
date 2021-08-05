@@ -14,8 +14,8 @@ const handleChangeBody = (e) => {
   return (
     <form className="note-editor">
       <input type="text" name="title" value ={title} 
-      onChange={handleChangeTitle()} />
-      <textarea name="body" value ={body} onChange={handleChangeBody()}  />
+      onChange={(e) => {handleChangeTitle(e)}} />
+      <textarea name="body" value ={body} onChange={(e) => {handleChangeBody(e)}}  />
       <div className="button-row">
         <input className="button" type="submit" value="Save" />
         <button type="button">Cancel</button>
