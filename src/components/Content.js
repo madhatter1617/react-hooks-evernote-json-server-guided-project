@@ -3,6 +3,8 @@ import NoteEditor from "./NoteEditor";
 import NoteViewer from "./NoteViewer";
 import Instructions from "./Instructions";
 
+
+
 /*
   Advice: If you cannot figure out how to get this component to work,
           move the div and getContent up into NoteContainer and
@@ -10,12 +12,13 @@ import Instructions from "./Instructions";
           Then complete the rest of your app before attempting to
           refactor to get this Content component to work.
 */
-function Content() {
+function Content({note, noteEd, editNote}) {
+  
   const getContent = () => {
-    if (false) {
-      return <NoteEditor />;
-    } else if (false) {
-      return <NoteViewer />;
+    if (noteEd) {
+      return <NoteEditor note={note} noteEd={noteEd} />;
+    } else if (note) {
+      return <NoteViewer editNote={editNote} note={note} />;
     } else {
       return <Instructions />;
     }

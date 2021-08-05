@@ -1,11 +1,17 @@
 import React from "react";
 
-function NoteViewer() {
+function NoteViewer({note:{title, body}, setNoteEd, editNote, noteEd }) {
+  //make a function to make edit note ture 
+  const editBtn = () => {
+      editNote(!noteEd)
+    
+  
+  }
   return (
     <>
-      <h2>Title</h2>
-      <p>Body</p>
-      <button>Edit</button>
+      <h2>{title}</h2>
+      <p>{body}</p>
+      <button onClick={()=> editBtn()} >Edit</button>
     </>
   );
 }
