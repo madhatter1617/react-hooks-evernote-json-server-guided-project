@@ -14,6 +14,8 @@ function NoteContainer() {
 
   const [noteEd, setNoteEd] = useState(false)
 
+  const[newEdit, setNewEdit] =useState({})
+
   useEffect(() => {
     fetch("http://localhost:3000/notes")
     .then(res => res.json())
@@ -36,13 +38,12 @@ const editNote = (noteEd) => {
 
   setNoteEd(noteEd)
 }
- 
   return (
     <>
       <Search setSearch={setSearch} />
       <div className="container">
         <Sidebar clickNote={clickNote} setNotes={setNotes} notes={searchedNote()}/>
-        <Content editNote={editNote} setNoteEd={setNoteEd} setNotes={setNotes} setNote={setNote} notes={notes} note={note} noteEd={noteEd} />
+        <Content editNote={editNote} setNoteEd={setNoteEd} setNotes={setNotes} setNote={setNote} notes={notes} note={note} noteEd={noteEd} setNewEdit={setNewEdit} newEdit={newEdit}/>
       </div>
     </>
   );
