@@ -42,7 +42,8 @@ const editNote = (noteEd) => {
     <>
       <Search setSearch={setSearch} />
       <div className="container">
-        <Sidebar clickNote={clickNote} setNotes={setNotes} notes={searchedNote()}/>
+        <Sidebar clickNote={clickNote} setNotes={setNotes} notes={searchedNote()} setNoteEd={setNoteEd} noteEd={noteEd}/>
+        
         <Content editNote={editNote} setNoteEd={setNoteEd} setNotes={setNotes} setNote={setNote} notes={notes} note={note} noteEd={noteEd} setNewEdit={setNewEdit} newEdit={newEdit}/>
       </div>
     </>

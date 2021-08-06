@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import NoteList from "./NoteList";
 
-function Sidebar({notes, setNotes, clickNote}) {
+function Sidebar({notes, setNotes, clickNote, setNoteEd,noteEd}) {
   const [title, setTitle]= useState('Default')
   const [body, setBody]= useState('extra...')
 
@@ -16,7 +16,7 @@ function Sidebar({notes, setNotes, clickNote}) {
 
   return (
     <div className="master-detail-element sidebar">
-      <NoteList  clickNote={clickNote} notes={notes} />
+      <NoteList setNoteEd={setNoteEd} noteEd={noteEd} clickNote={clickNote} notes={notes} />
       <button onClick={()=>createNewNote()}>New</button>
     </div>
   );

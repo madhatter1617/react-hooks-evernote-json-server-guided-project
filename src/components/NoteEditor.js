@@ -22,7 +22,7 @@ function NoteEditor({note:{title, body},setNoteEd, setNotes,noteEd, notes, newEd
 
 	
   return (
-    <form className="note-editor">
+    <form className="note-editor" >
       <input type="text" name="title" value ={newTitle} 
       onChange={(e) => {handleChangeTitle(e)}} />
       <textarea name="body" value ={newBody} onChange={(e) => {handleChangeBody(e)}}  />
