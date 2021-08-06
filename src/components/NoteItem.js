@@ -13,6 +13,7 @@ function NoteItem({note, note:{title, body}, clickNote,setNoteEd}) {
      >    
       <h2>{title}</h2> 
       <p>{body.substring(0, 69)}</p>
+      
     </li>
   );
 }

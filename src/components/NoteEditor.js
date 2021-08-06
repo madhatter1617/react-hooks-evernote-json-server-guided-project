@@ -25,7 +25,9 @@ function NoteEditor({note:{title, body},setNoteEd, setNotes,noteEd, notes, newEd
     <form className="note-editor" >
       <input type="text" name="title" value ={newTitle} 
       onChange={(e) => {handleChangeTitle(e)}} />
-      <textarea name="body" value ={newBody} onChange={(e) => {handleChangeBody(e)}}  />
+      <textarea name="body" value ={newBody} onChange={(e) => {handleChangeBody(e)}}  
+      />
+     
       <div className="button-row">
         <input className="button" type="submit" value="Save" onClick={handleSubmit}  />
         <button type="button" onClick={cancelBtn} >Cancel</button>

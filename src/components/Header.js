@@ -1,12 +1,16 @@
 import React from "react";
 
 function Header() {
+  // const imageClick = () => {
+  //   console.log('Click');
+  // } 
+  // className="nav-item" onClick={imageClick}
   return (
     <div className="nav-bar">
       <ul>
-        <li className="nav-item">
+        
           <h2>Garbage Collectors' Flatbook</h2>
-        </li>
+        
       </ul>
     </div>
   );
